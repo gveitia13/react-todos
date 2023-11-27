@@ -2,7 +2,7 @@ import TodoRowItem from "./TodoRowItem";
 
 function TodoTable(props) {
 
-  return(
+  return (
     <table className='table table-hover'>
       <thead>
       <tr>
@@ -12,8 +12,8 @@ function TodoTable(props) {
       </tr>
       </thead>
       <tbody>
-      {props.todos.map(e => <TodoRowItem rowNumber={e.rowNumber} rowDescription={e.rowDescription}
-                                   rowAssigned={e.rowAssigned}/>)}
+      {props.todos.map(e => <TodoRowItem key={e.rowNumber} rowNumber={e.rowNumber} rowDescription={e.rowDescription}
+                                         rowAssigned={e.rowAssigned} deleteTodo={props.deleteTodo}/>)}
       </tbody>
     </table>
   )
